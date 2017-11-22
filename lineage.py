@@ -123,8 +123,6 @@ def build_tree(name, dep, flag):
             results, table_name_and_id_dict,tree_json_dict)
 
     tree_json_dict['name'] = table_name_and_id_dict[tree_json_dict['name']]
-    print table_name_and_id_dict
-    print tree_json_dict
     if 'children' in tree_json_dict:
         tree_json_dict['children'] = chang_name(table_name_and_id_dict, tree_json_dict['children'])
     return dumps(tree_json_dict)
